@@ -153,7 +153,7 @@ func allPackages(ctxt *build.Context, sema chan bool, root string, ch chan<- ite
 }
 
 func DoCoreMain(dir string, query string) string {
-
+	syms = make([]symbol, 0)
 	ctxt := build.Default // copy
 	ctxt.GOPATH = dir     // disable GOPATH
 	ctxt.GOROOT = ""
